@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parent Information Form</title>
+<style>
+  * {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    margin: 0;
+    padding: 20px;
+    background-color: #f2f2f2;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  input[type=text], input[type=tel], textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=button], input[type=submit] {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=button]:hover, input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  .progress {
+    width: 100%;
+    background-color: #f1f1f1;
+  }
+
+  .progress-bar {
+    width: 0%;
+    height: 30px;
+    background-color: #4caf50;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+  }
+
+  .stage {
+    display: none;
+  }
+
+  .active {
+    display: block;
+  }
+
+  button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+</style>
+<html lang="en" dir="ltr"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta charset="utf-8">   
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="/about-us" />
+<link rel="shortlink" href="/node/19" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>About Us | Envid International School</title>
+  <link type="text/css" rel="stylesheet" href="https://newlandschoolng.com/sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://newlandschoolng.com/sites/default/files/css/css_7wQ55ZXpyj3gNOyk1OoXgNL5ff62gPuCgfJEL1JNTc4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://newlandschoolng.com/sites/default/files/css/css_PGbJgHCUCBf4dg7K9Kt8aAwsApndP4GZ9RuToPy3-Fk.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://newlandschoolng.com/sites/default/files/css/css_t55MdMIQaigrPrrqpCIDXdglFapagwHAD_-JOEvgYRk.css" media="all" />
+<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Quicksand:100,300,400,500,600,700,800,900&amp;rxkj34" media="all" />
+<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Sacramento:300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;rxkj34" media="all" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <!-- HTML5 element support for IE6-8 -->
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script type="text/javascript" src="https://newlandschoolng.com/sites/default/files/js/js_YD9ro0PAqY25gGWrTki6TjRUG8TdokmmxjfqpNNfzVU.js"></script>
+<script type="text/javascript" src="https://newlandschoolng.com/sites/default/files/js/js_3TNc2vbimh14F8SzwaADKX_f4dD-IX_dbdyR1eddsKQ.js"></script>
+<script type="text/javascript" src="https://newlandschoolng.com/sites/default/files/js/js_IGN2EUXVVMYch3TqfUw-WVBZdvYZwU11uRWPSo8dRqE.js"></script>
+<script type="text/javascript">
+// <!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"newland","theme_token":"u-qztab3ss-NKCuf2rRbIL6YkMFKzBPMgijCePTmB80","js":{"sites\/all\/modules\/animate_on_scroll\/js\/script.js":1,"misc\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/libraries\/aos\/dist\/aos.js":1,"sites\/all\/themes\/newland\/assets\/js\/main.js":1,"sites\/all\/themes\/newland\/assets\/vendor\/aos\/aos.js":1,"sites\/all\/themes\/newland\/assets\/vendor\/bootstrap\/js\/bootstrap.bundle.min.js":1,"sites\/all\/themes\/newland\/assets\/vendor\/glightbox\/js\/glightbox.min.js":1,"sites\/all\/themes\/newland\/assets\/vendor\/isotope-layout\/isotope.pkgd.min.js":1,"sites\/all\/themes\/newland\/assets\/vendor\/swiper\/swiper-bundle.min.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/simplenews\/simplenews.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/libraries\/aos\/dist\/aos.css":1,"sites\/all\/themes\/newland\/assets\/css\/style.css":1,"sites\/all\/themes\/newland\/assets\/vendor\/aos\/aos.css":1,"sites\/all\/themes\/newland\/assets\/vendor\/bootstrap\/css\/bootstrap.min.css":1,"sites\/all\/themes\/newland\/assets\/vendor\/bootstrap-icons\/bootstrap-icons.css":1,"sites\/all\/themes\/newland\/assets\/vendor\/boxicons\/css\/boxicons.min.css":1,"sites\/all\/themes\/newland\/assets\/vendor\/glightbox\/css\/glightbox.min.css":1,"sites\/all\/themes\/newland\/assets\/vendor\/remixicon\/remixicon.css":1,"sites\/all\/themes\/newland\/assets\/vendor\/swiper\/swiper-bundle.min.css":1,"sites\/all\/themes\/newland\/css\/yamm.css":1,"\/\/fonts.googleapis.com\/css?family=Quicksand:100,300,400,500,600,700,800,900":1,"\/\/fonts.googleapis.com\/css?family=Sacramento:300,300i,400,400i,600,600i,700,700i,800,800i,900,900i":1}}});
+//--><!]]>
+</script>
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-19 node-type-page">
+  <div id="skip-link">
+    <a href="#main" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    
+<header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+      <input type="checkbox" id="nav-check">
+      <div class="logo">
+        <a class="img-fluid" href="/" title="Home">
+          <img src="envid/school5.jpg" alt="">
+        </a>
+      </div>
+
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="About Us.html">About Us</a></li>
+          <li><a class="nav-link scrollto" href="Curriculum.html">Curriculum</a></li>
+          <li class="dropdown"><a href="#"><span>Admissions</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="/admissions-overview">Admission Overview</a></li>
+              <li><a href="/admissions-philosophy">Admission Philosophy</a></li>
+              <li><a href="/why-choose-Envid-International-school">Why choose Envid International School?</a></li>
+            </ul>
+          </li>     
+          <li class="dropdown"><a href="#"><span>News & Information</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="school-year">School Year</a></li>
+              <li><a href="green-corner">Green Corner</a></li>
+            </ul>
+          </li>        
+          <li><a class="getstarted" href="/contact-us">Contact Us</a></li>  
+        </ul>
+      </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+
+
+<div class="container">
+  <h2>Parent Information Form</h2>
+  <form id="parentForm" action="process_form.php" method="post">
+    <label for="fatherName">Name of Father:</label>
+    <input type="text" id="fatherName" name="fatherName" required>
+    <div id="fatherNameError" class="error"></div>
+
+    <label for="motherName">Name of Mother:</label>
+    <input type="text" id="motherName" name="motherName" required>
+    <div id="motherNameError" class="error"></div>
+
+    <label for="fatherNationality">Father's Nationality:</label>
+    <input type="text" id="fatherNationality" name="fatherNationality" required>
+    <div id="fatherNationalityError" class="error"></div>
+
+    <label for="motherNationality">Mother's Nationality:</label>
+    <input type="text" id="motherNationality" name="motherNationality" required>
+    <div id="motherNationalityError" class="error"></div>
+
+    <label for="fatherOccupation">Father's Occupation:</label>
+    <input type="text" id="fatherOccupation" name="fatherOccupation" required>
+    <div id="fatherOccupationError" class="error"></div>
+
+    <label for="motherOccupation">Mother's Occupation:</label>
+    <input type="text" id="motherOccupation" name="motherOccupation" required>
+    <div id="motherOccupationError" class="error"></div>
+
+    <label for="fatherBusinessAddress">Father's Business Address:</label>
+    <textarea id="fatherBusinessAddress" name="fatherBusinessAddress" rows="4" required></textarea>
+    <div id="fatherBusinessAddressError" class="error"></div>
+
+    <label for="motherBusinessAddress">Mother's Business Address:</label>
+    <textarea id="motherBusinessAddress" name="motherBusinessAddress" rows="4" required></textarea>
+    <div id="motherBusinessAddressError" class="error"></div>
+
+    <label for="fatherPhoneNumber">Father's Phone Number:</label>
+    <input type="tel" id="fatherPhoneNumber" name="fatherPhoneNumber" required>
+    <div id="fatherPhoneNumberError" class="error"></div>
+
+    <label for="motherPhoneNumber">Mother's Phone Number:</label>
+    <input type="tel" id="motherPhoneNumber" name="motherPhoneNumber" required>
+    <div id="motherPhoneNumberError" class="error"></div>
+
+
+  <!-- Form fields for academic information -->
+
+  <!-- <button onclick="prevStage()">Previous</button> -->
+  <button onclick="nextStage()">Next</button>
+  </form>
+</div>
+
+<script src="registration3.js"></script>
+
+</body>
+</html>

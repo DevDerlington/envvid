@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Successful</title>
+<style>
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+    }
+    .container {
+        /* position: relative; */
+        max-width: 400px;
+        justify-content: center;
+        align-items: center;
+        margin: 100px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    label {
+        font-weight: bold;
+    }
+    
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #416D19;
+    
+    }
+
+    .School{
+       
+       margin-left: 40%;
+       margin-top: 10px;
+       margin-bottom: 20px;
+           }
+</style>
+</head>
+<body>
+    
+
+
+
+
+
+    <div class="container">
+        <img class="School"   src="envid/school5.jpg"   width="70px" height="70px" alt="">
+      <h2>Welcome Admin!! <br> You have successfully Login.</h2>
+      
+          <input type="submit" id="submit" value="Go To Admin Board">
+          </form>
+  </div>
+
+  <script>
+document.addEventListener('DOMContentLoaded', function(){
+var  submit = document.getElementById("submit");
+
+
+submit.addEventListener('click', function(){
+    window.location.href='container.html';
+})
+
+
+})
+
+
+  </script>
+</body>
+</html>

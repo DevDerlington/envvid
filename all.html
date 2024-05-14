@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        
+        input[type="text"] {
+            width: calc(33.33% - 10px);
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .delete-btn, .edit-btn {
+            background-color: #f44336;
+            margin-right: 3px;
+        }
+        .delete-btn:hover, .edit-btn:hover {
+            background-color: #c0392b;
+        }
+
+        table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Management System</h1>
+
+        <input type="text" id="firstName" placeholder="Enter First Name">
+        <input type="text" id="lastName" placeholder="Enter Last Name">
+        <input type="text" id="className" placeholder="Enter Class Name">
+        <button onclick="addStudent()">Add Student</button>
+
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Class Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="studentList"></tbody>
+        </table>
+    </div>
+
+    <script>
+        let students = [];
+
+        function saveStudentsToLocalStorage() {
+            localStorage.setItem('students', JSON.stringify(students));
+        }
+
+        function loadStudentsFromLocalStorage() {
+            const storedStudents = localStorage.getItem('students');
+            if (storedStudents) {
+                students = JSON.parse(storedStudents);
+                renderStudents();
+            }
+        }
+
+    function renderStudents() {
+    const studentList = document.getElementById("studentList");
+    studentList.innerHTML = "";
+    students.forEach((student, index) => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+            <td>${student.firstName}</td>
+            <td>${student.lastName}</td>
+            <td>${student.className}</td>
+            <td>
+                <button class="edit-btn" onclick="editStudent(${index})">Edit</button>
+                <button  class="delete-btn" onclick="deleteStudent(${index})">Delete</button>
+            </td>
+        `;
+        studentList.appendChild(tr);
+    });
+    saveStudentsToLocalStorage();
+}
+
+        function addStudent() {
+            const firstNameInput = document.getElementById("firstName");
+            const lastNameInput = document.getElementById("lastName");
+            const classNameInput = document.getElementById("className");
+            const firstName = firstNameInput.value.trim();
+            const lastName = lastNameInput.value.trim();
+            const className = classNameInput.value.trim();
+            if (firstName && lastName && className) {
+                students.push({ firstName: firstName, lastName: lastName, className: className });
+                renderStudents();
+                firstNameInput.value = "";
+                lastNameInput.value = "";
+                classNameInput.value = "";
+            } else {
+                alert("Please enter all fields.");
+            }
+        }
+
+    function editStudent(index) {
+    const student = students[index];
+    const newFirstName = prompt("Enter new first name:", student.firstName);
+    const newLastName = prompt("Enter new last name:", student.lastName);
+    const newClassName = prompt("Enter new class name:", student.className);
+    
+    students[index] = {
+        firstName: newFirstName,
+        lastName: newLastName,
+        className: newClassName
+    };
+    
+    renderStudents();
+}
+        
+
+        function deleteStudent(index) {
+            students.splice(index, 1);
+            renderStudents();
+        }
+
+        loadStudentsFromLocalStorage();
+    </script>
+</body>
+</html>
+
+
+<!-- <h2>Students</h2>
+        <ul id="studentList"></ul -->
